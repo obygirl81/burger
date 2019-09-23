@@ -1,36 +1,41 @@
-<h1 class="text-center mt-3">Eat-Da-Burger</h1>
+<div class="row">
+  <center>
+    <div class="col-md-6">
+      <h4 class="red_font">Delicious Burger Menu!</h4>
+      <div id="ready_to_eat">
 
-<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS70GZod_uXRUIS5cqBD-9sqf69xFGGMs7CMVdWfCETyAaoyTpXKA" alt="burger" class="burger-img img-fluid mx-auto d-block mt-3">
-
-<h2 class="text-center mt-3">Select a burger to devour!</h2>
-
-<div class="burger-list-headers mt-3 d-flex justify-content-around">
-    <h3>Ready to devour!</h3>
-    <h3>Already eaten!</h3>
-</div>
-
-<div class="flex burger-list-container justify-content-around">
-    <ul class="burger-list ready-to-eat">
-        {{#each burger}}
-            {{#unless devoured}}
-                {{> burgers/burger-block devoured=true}}
-            {{/unless}}
+        {{#each burgers}}
+          {{#unless devoured}}
+          <form action="burger/eat/{{id}}" method="POST">
+            <div class="input-group">
+              <li class="form-control">{{id}}. {{burger_name}}</li>
+                <span class="input-group-btn">
+                  <button class="btn btn-success devour-button" type="submit">Devour It!</button>
+                </span>
+            </div>
+          </form>
+          {{/unless}}
         {{/each}}
-    </ul>
 
-    <ul class="burger-list devoured-burgers">
-        {{#each burger}}
-            {{#if devoured}} 
-                {{> burgers/burger-block devoured=false}}
-            {{/if}}
+      </div>
+    </div>
+
+    <div class="col-md-6">
+      <h4 class="red_font">Already eaten!</h4>
+      <div id="already_eaten">
+
+        {{#each burgers}}
+          {{#if this.devoured}}
+            <div class="input-group">
+              <li class="form-control">{{this.id}}. {{this.burger_name}}</li>
+              <span class="input-group-btn">
+                <button class="btn btn-info whine-button" type="button">Yum!</button>
+              </span>
+            </div>
+          {{/if}}
         {{/each}}
-    </ul>
-</div>
 
-<form class="flex justify-content-center create-burger-form col-md-6 mt-3">
-  <div class="form-group">
-    <label for="burgersubmit">Add a burger</label>
-    <input type="text" name="name" class="form-control" id="addburger">
-    <button type="submit" class="btn btn-success create-burger mt-3">Submit order</button>
-  </div>
-</form>
+      </div>
+    </div>
+  </center>
+</div>
