@@ -1,0 +1,30 @@
+* {
+    box-sizing: border-box; 
+}
+
+body { 
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+.burger-img {
+    width: 250px; 
+    height: 250px;
+}
+
+.burger-list {
+    font-size: 25px;  
+    border: 2px groove brown;
+}
+
+.burger-list-container {
+    padding: 25px;  
+}
+
+label {
+    font-size: 38px; 
+}
+
+.devoured-burgers {
+    color: gold; 
+    text-decoration-line: none;  
+}
