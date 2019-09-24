@@ -41,7 +41,5 @@ var orm = {
 
 };
 
-
-
 // Export to use
 module.exports = orm;
