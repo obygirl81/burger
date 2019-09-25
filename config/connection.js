@@ -16,6 +16,7 @@ else{
   });
 }
 
+connection.connect();
 
 // Export the Connection
 module.exports = connection;

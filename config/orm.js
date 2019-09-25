@@ -2,13 +2,13 @@
 var connection = require('./connection.js');
 
 // Import MySQL connection
-connection.connect(function(err) {
-  if (err) {
-    console.error('error connecting: ' + err.stack);
-    return;
-  };
-  console.log('connected as id ' + connection.threadId);
-});
+// connection.connect(function(err) {
+//   if (err) {
+//     console.error('error connecting: ' + err.stack);
+//     return;
+//   };
+//   console.log('connected as id ' + connection.threadId);
+// });
 
 var orm = {
   selectAll: function(callback) {
