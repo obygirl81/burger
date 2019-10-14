@@ -23,3 +23,5 @@ This application was deployed to Heroku and here is a link to check it out:https
 ##### Homepage
 ![Screenshot of home page](https://github.com/obygirl81/burger/blob/master/public%20/screenshot/Screen%20Shot%202019-09-24%20at%204.44.33%20PM.png)
 
+### Author
+* Obiageli Ogbutor
